@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<GenericTestAutomationFramework>
+  <RunSettings>
+    <AUT>https://www.google.be</AUT>
+    <Browser>Chrome</Browser>
+    <TestType>Regression</TestType>
+    <IsLog>Y</IsLog>
+    <LogPath>C:\\Users\\Gebruiker\\TestAutomationLogs\\</LogPath>
+    <BuildName>Build1</BuildName>
+    <IsReport>N</IsReport>
+    <UserName>MohamedEA</UserName>
+    <Technology>Selenium</Technology>
+  </RunSettings>
+</GenericTestAutomationFramework>
+
