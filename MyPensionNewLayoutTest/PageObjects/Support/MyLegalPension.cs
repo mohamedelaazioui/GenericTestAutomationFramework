@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using OpenQA.Selenium.Support.PageObjects;
 using Protractor;
 using GenericTestAutomationFramework.Base;
+using GenericTestAutomationFramework.Extensions;
 
 namespace MyPensionNewLayoutTest.PageObjects.Support
 {
