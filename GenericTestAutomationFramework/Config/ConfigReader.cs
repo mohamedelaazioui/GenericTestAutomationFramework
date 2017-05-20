@@ -22,19 +22,20 @@ namespace EAAutoFramework.Config
             XPathItem isreport;
             XPathItem buildname;
             XPathItem logPath;
-
-            string strFilename = Environment.CurrentDirectory.ToString() + "\\Config\\GlobalConfig.xml";
-            FileStream stream = new FileStream(strFilename, FileMode.Open);
+            
+            string strFileName = Environment.CurrentDirectory.ToString() + "\\GenericTestAutomationFramework\\Config\\GlobalConfig.xml";
+            
+            FileStream stream = new FileStream(strFileName, FileMode.Open);
             XPathDocument document = new XPathDocument(stream);
             XPathNavigator navigator = document.CreateNavigator();
 
             //Get XML Details and pass it in XPathItem type variables
-            aut = navigator.SelectSingleNode("EAAutoFramework/RunSettings/AUT");
-            buildname = navigator.SelectSingleNode("EAAutoFramework/RunSettings/BuildName");
-            testtype = navigator.SelectSingleNode("EAAutoFramework/RunSettings/TestType");
-            islog = navigator.SelectSingleNode("EAAutoFramework/RunSettings/IsLog");
-            isreport = navigator.SelectSingleNode("EAAutoFramework/RunSettings/IsReport");
-            logPath = navigator.SelectSingleNode("EAAutoFramework/RunSettings/LogPath");
+            aut = navigator.SelectSingleNode("//AUT");
+            buildname = navigator.SelectSingleNode("//BuildName");
+            testtype = navigator.SelectSingleNode("//TestType");
+            islog = navigator.SelectSingleNode("//IsLog");
+            isreport = navigator.SelectSingleNode("//IsReport");
+            logPath = navigator.SelectSingleNode("//LogPath");
 
             //Set XML Details in the property to be used accross framework
             Settings.AUT = aut.Value.ToString();
@@ -45,5 +46,6 @@ namespace EAAutoFramework.Config
             Settings.LogPath = logPath.Value.ToString();
         }
 
+        
     }
 }

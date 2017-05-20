@@ -43,7 +43,7 @@ namespace GenericTestAutomationFramework.Base
                     break;
 
                 case BrowserType.Chrome:
-                    DriverContext.Driver = new ChromeDriver();
+                    DriverContext.Driver = new ChromeDriver(@"C:\webdrivers");
                     DriverContext.Browser = new Browser(DriverContext.Driver);
                     break;
 
