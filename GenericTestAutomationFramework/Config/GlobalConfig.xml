@@ -4,7 +4,7 @@
   <RunSettings>
     <AUT>https://www.google.be</AUT>
     <Browser>Chrome</Browser>
-    <ConfigPath>C:\\Users\\Gebruiker\\Desktop\\GenericTestAutomationFramework\\GenericTestAutomationFramework\\Config\\GlobalConfig.xml</ConfigPath>
+    
     <TestType>Regression</TestType>
     <IsLog>Y</IsLog>
     <LogPath>C:\\Users\\Gebruiker\\TestAutomationLogs\\</LogPath>
