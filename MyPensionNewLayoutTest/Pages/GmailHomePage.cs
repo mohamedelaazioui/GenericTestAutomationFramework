@@ -8,26 +8,30 @@ namespace MyPensionNewLayoutTest.Pages
     internal class GmailHomePage : BasePage
     {
 
-        [FindsBy(How = How.Id, Using = "Email")]
+        [FindsBy(How = How.Id, Using = "identifierId")]
         public IWebElement emailTxt;
 
-        [FindsBy(How = How.Id, Using = "next")]
+        [FindsBy(How = How.Id, Using = "identifierNext")]
         public IWebElement btnNext;
 
-        [FindsBy(How = How.Id, Using = "Passwd")]
+        [FindsBy(How = How.XPath, Using = "//*[@id='password']/div[1]/div/div[1]/input")]
         public IWebElement passwordTxt;
 
-        [FindsBy(How = How.Id, Using = "signIn")]
+        [FindsBy(How = How.Id, Using = "passwordNext")]
         public IWebElement btnSignIn;
 
-        public GmailAuthenticatedPage LogIn(string email, string password)
+        internal void FillInCredentials(string email, string password)
         {
             emailTxt.SendKeys(email);
             btnNext.Click();
             passwordTxt.SendKeys(password);
+           
+        }
+        internal GmailHomePage LogIn()
+        {
             btnSignIn.Click();
 
-            return GetInstance<GmailAuthenticatedPage>();
+            return GetInstance<GmailHomePage>();
         }
 
         internal void CheckIfGmailHomePageExists()

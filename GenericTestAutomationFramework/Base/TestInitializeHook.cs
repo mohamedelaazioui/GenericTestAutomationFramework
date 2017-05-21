@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static GenericTestAutomationFramework.Base.Browser;
+using GenericTestAutomationFramework.Extensions;
 
 namespace GenericTestAutomationFramework.Base
 {
@@ -57,6 +58,7 @@ namespace GenericTestAutomationFramework.Base
         public virtual void NavigateSite()
         {
             DriverContext.Browser.GoToUrl(Settings.AUT);
+            DriverContext.Driver.WaitForPageLoaded();
             LogHelpers.Write("Opened the browser !!!");
         }
        

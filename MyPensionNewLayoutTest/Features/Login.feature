@@ -1,4 +1,4 @@
-﻿Feature: Login functionality
+﻿Feature: Login
 
 	In order to consult my mail
 	As I got an active gmail account
@@ -6,6 +6,7 @@
 
 Background: 
 	Given I open gmail website
+
 @positive
 Scenario: Successful Login with Valid Credentials
 	

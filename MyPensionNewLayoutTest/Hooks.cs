@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using static GenericTestAutomationFramework.Base.Browser;
 
+
 namespace MyPensionNewLayoutTest
 {
     [Binding]
@@ -22,6 +23,7 @@ namespace MyPensionNewLayoutTest
         public static void TestStart()
         {
             Hooks init = new Hooks();
+            
 
         }
     }

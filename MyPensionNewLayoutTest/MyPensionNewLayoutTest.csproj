@@ -95,15 +95,13 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="BasicTests\BasicTest.cs" />
-    <Compile Include="BasicTests\Google.cs" />
     <Compile Include="Features\Login.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Login.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
-    <Compile Include="Steps\LoginFunctionalitySteps.cs" />
+    <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Pages\GmailAuthenticatedPage.cs" />
     <Compile Include="Pages\GmailHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
