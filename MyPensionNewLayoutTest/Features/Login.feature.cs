@@ -64,22 +64,37 @@ namespace MyPensionNewLayoutTest.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 7
+#line 8
+ testRunner.Given("I open gmail website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Successful Login with Valid Credentials")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("positive")]
         public virtual void SuccessfulLoginWithValidCredentials()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful Login with Valid Credentials", new string[] {
-                        "mytag"});
-#line 8
-this.ScenarioSetup(scenarioInfo);
-#line 9
- testRunner.Given("I open gmail website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "positive"});
 #line 10
- testRunner.When("I entered my username and password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
- testRunner.And("I clicked on next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
+#line 7
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Email",
+                        "Password"});
+            table1.AddRow(new string[] {
+                        "mohamed.elaazioui@gmail.com",
+                        "CHOCOpeche-123"});
 #line 12
+ testRunner.When("I entered my Email and Password", ((string)(null)), table1, "When ");
+#line 15
+ testRunner.When("I clicked on sign button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
  testRunner.Then("the result should be see compose button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

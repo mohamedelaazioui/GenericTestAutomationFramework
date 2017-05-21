@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace GenericTestAutomationFramework.Base
 {
-    public class BaseStep : Base
+    public class BaseStep : BasePage
     {
-        public virtual void NavigateSite()
+        public virtual void TestStart()
         {
             DriverContext.Browser.GoToUrl(Settings.AUT);
             LogHelpers.Write("Opened the browser!!!");

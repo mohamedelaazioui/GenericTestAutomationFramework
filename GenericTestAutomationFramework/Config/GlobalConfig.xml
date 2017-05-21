@@ -2,7 +2,7 @@
 
 <GenericTestAutomationFramework>
   <RunSettings>
-    <AUT>https://www.google.be</AUT>
+    <AUT>https://www.gmail.com</AUT>
     <Browser>Chrome</Browser>
     
     <TestType>Regression</TestType>

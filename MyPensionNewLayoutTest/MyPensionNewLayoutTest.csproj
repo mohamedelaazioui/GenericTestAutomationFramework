@@ -103,9 +103,10 @@
       <DependentUpon>Login.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
-    <Compile Include="Pages\HomePage.cs" />
+    <Compile Include="Steps\LoginFunctionalitySteps.cs" />
+    <Compile Include="Pages\GmailAuthenticatedPage.cs" />
+    <Compile Include="Pages\GmailHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\LoginSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Login.feature">
