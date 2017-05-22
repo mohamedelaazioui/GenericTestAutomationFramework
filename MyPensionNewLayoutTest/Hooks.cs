@@ -13,6 +13,8 @@ namespace TodosAppTest
     [Binding]
     public class Hooks : TestInitializeHook
     {
+
+        private static Hooks hooks;
         public Hooks() : base(BrowserType.Chrome)
         {
             InitializeSettings();
@@ -22,15 +24,16 @@ namespace TodosAppTest
         [BeforeFeature]
         public static void TestStart()
         {
-            Hooks init = new Hooks();
+            hooks = new Hooks();
             
-
         }
 
         [AfterFeature]
-        public static void TestEnd()
+        public  static void TestEnd()
         {
-
+            hooks.CloseSite();
         }
+
+        
     }
 }

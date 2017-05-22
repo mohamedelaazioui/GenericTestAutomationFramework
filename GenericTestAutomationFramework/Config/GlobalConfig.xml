@@ -7,7 +7,7 @@
     
     <TestType>Functional</TestType>
     <IsLog>Y</IsLog>
-    <LogPath>C:\\Users\\Gebruiker\\TestAutomationLogs\\</LogPath>
+    <LogPath>C:\\Users\\Gebruiker\\Desktop\\GenericTestAutomationFramework\\Logs\\</LogPath>
     <BuildName>Build1</BuildName>
     <IsReport>N</IsReport>
     <UserName>MohamedEA</UserName>

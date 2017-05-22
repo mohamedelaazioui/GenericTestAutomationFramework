@@ -61,6 +61,14 @@ namespace GenericTestAutomationFramework.Base
             DriverContext.Driver.WaitForPageLoaded();
             LogHelpers.Write("Opened the browser !!!");
         }
-         
+
+        public virtual void CloseSite()
+        {
+            LogHelpers.Write("Closing the browser !!!");
+            DriverContext.Driver.Dispose();
+            LogHelpers.Write("Browser was closed!!!");
+        }
+
+
     }
 }
