@@ -2,17 +2,17 @@
 
 <GenericTestAutomationFramework>
   <RunSettings>
-    <AUT>https://www.gmail.com</AUT>
+    <AUT>http://localhost:8000/#!/todos</AUT>
     <Browser>Chrome</Browser>
     
-    <TestType>Regression</TestType>
+    <TestType>Functional</TestType>
     <IsLog>Y</IsLog>
     <LogPath>C:\\Users\\Gebruiker\\TestAutomationLogs\\</LogPath>
     <BuildName>Build1</BuildName>
     <IsReport>N</IsReport>
     <UserName>MohamedEA</UserName>
     <Technology>Selenium</Technology>
-    <Environment>ENV</Environment>
+    <Environment>DEV</Environment>
   </RunSettings>
 </GenericTestAutomationFramework>
 

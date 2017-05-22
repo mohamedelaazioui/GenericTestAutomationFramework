@@ -6,8 +6,8 @@
     <ProjectGuid>{2416A356-7509-49DE-81AF-DA3F47DB3087}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyPensionNewLayoutTest</RootNamespace>
-    <AssemblyName>MyPensionNewLayoutTest</AssemblyName>
+    <RootNamespace>TodosAppTest</RootNamespace>
+    <AssemblyName>TodosAppTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -95,21 +95,20 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="Features\Login.feature.cs">
+    <Compile Include="Features\Search.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Login.feature</DependentUpon>
+      <DependentUpon>Search.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
-    <Compile Include="Steps\LoginSteps.cs" />
-    <Compile Include="Pages\GmailAuthenticatedPage.cs" />
-    <Compile Include="Pages\GmailHomePage.cs" />
+    <Compile Include="Pages\TodosHomePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\SearchSteps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\Login.feature">
+    <None Include="Features\Search.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Login.feature.cs</LastGenOutput>
+      <LastGenOutput>Search.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

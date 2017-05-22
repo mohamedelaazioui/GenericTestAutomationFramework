@@ -61,8 +61,6 @@ namespace GenericTestAutomationFramework.Base
             DriverContext.Driver.WaitForPageLoaded();
             LogHelpers.Write("Opened the browser !!!");
         }
-       
-
-        
+         
     }
 }

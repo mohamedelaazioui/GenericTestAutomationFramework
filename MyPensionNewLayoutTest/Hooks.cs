@@ -8,7 +8,7 @@ using TechTalk.SpecFlow;
 using static GenericTestAutomationFramework.Base.Browser;
 
 
-namespace MyPensionNewLayoutTest
+namespace TodosAppTest
 {
     [Binding]
     public class Hooks : TestInitializeHook
@@ -24,6 +24,12 @@ namespace MyPensionNewLayoutTest
         {
             Hooks init = new Hooks();
             
+
+        }
+
+        [AfterFeature]
+        public static void TestEnd()
+        {
 
         }
     }

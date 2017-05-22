@@ -28,6 +28,7 @@ namespace GenericTestAutomationFramework.Extensions
             return ddl.AllSelectedOptions;
         }
 
+       
         public static void Hover(this IWebElement element)
         {
             Actions actions = new Actions(DriverContext.Driver);
