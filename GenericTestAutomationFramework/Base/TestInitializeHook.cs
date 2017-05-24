@@ -1,5 +1,4 @@
-﻿using EAAutoFramework.Config;
-using GenericTestAutomationFramework.Config;
+﻿using GenericTestAutomationFramework.Config;
 using GenericTestAutomationFramework.Helpers;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
@@ -15,7 +14,7 @@ namespace GenericTestAutomationFramework.Base
 {
     public abstract class TestInitializeHook
     {
-        public readonly BrowserType Browser;
+        private readonly BrowserType Browser;
 
         public TestInitializeHook(BrowserType browser)
         {
@@ -24,16 +23,23 @@ namespace GenericTestAutomationFramework.Base
         public void InitializeSettings()
         {
             ConfigReader.SetFrameworkSettings();
-
             // Set Log
             LogHelpers.CreateLogFile();
-
             // Open Browser
             OpenBrowser(Browser);
-
-            LogHelpers.Write("Initialized Framework");
+            LogHelpers.Write("*********************");
+            LogHelpers.Write("Initialized Framework!");
+            LogHelpers.Write(String.Format("System Under Test {0}", Settings.AUT));
         }
 
+        public void TerminateSettings()
+        {
+            CloseSite();
+            LogHelpers.Write("Framework closed");
+            LogHelpers.Write("*********************");
+            LogHelpers.CloseLogFile();
+
+        }
         private void OpenBrowser(BrowserType browserType = BrowserType.Chrome)
         {
             switch (browserType)
@@ -59,14 +65,15 @@ namespace GenericTestAutomationFramework.Base
         {
             DriverContext.Browser.GoToUrl(Settings.AUT);
             DriverContext.Driver.WaitForPageLoaded();
-            LogHelpers.Write("Opened the browser !!!");
+            LogHelpers.Write("Opened the browser!!!");
         }
 
         public virtual void CloseSite()
         {
-            LogHelpers.Write("Closing the browser !!!");
+            LogHelpers.Write("Closing the browser!!!");
             DriverContext.Driver.Dispose();
             LogHelpers.Write("Browser was closed!!!");
+
         }
 
 

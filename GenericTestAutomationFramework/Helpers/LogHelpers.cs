@@ -17,24 +17,33 @@ namespace GenericTestAutomationFramework.Helpers
         // Create a file which can store the log information
         public static void CreateLogFile()
         {
+
             string dir = Settings.LogPath;
-            if(Directory.Exists(dir))
+            if (Directory.Exists(dir))
             {
                 _streamw = File.AppendText(dir + _logFileName + ".log");
-            } else
+
+            }
+            else
             {
                 Directory.CreateDirectory(dir);
                 _streamw = File.AppendText(dir + _logFileName + ".log");
             }
         }
-        
+
         // Create a method which can write the text in the file
         public static void Write(string logMessage)
         {
-            _streamw.Write("{0} {1}",DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
+            _streamw.Write("{0} {1}", DateTime.Now.ToLongTimeString(), DateTime.Now.ToLongDateString());
             _streamw.WriteLine("     {0}", logMessage);
             _streamw.Flush();
 
         }
+
+        public static void CloseLogFile()
+        {
+            _streamw.Dispose();
+        }
+
     }
 }

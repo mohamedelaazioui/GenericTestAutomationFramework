@@ -25,15 +25,13 @@ namespace TodosAppTest
         public static void TestStart()
         {
             hooks = new Hooks();
-            
         }
 
         [AfterFeature]
-        public  static void TestEnd()
+        public static void TestEnd()
         {
-            hooks.CloseSite();
+            hooks.TerminateSettings();
         }
 
-        
     }
 }

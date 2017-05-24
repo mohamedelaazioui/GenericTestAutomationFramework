@@ -32,7 +32,7 @@ namespace TodosAppTest.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Search", "\tIn order to easily find todos items\r\n\tAs a 21st century user\r\n\tI want to be able" +
-                    " to find todo item via search ", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    " to a find todo item via search ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -83,9 +83,9 @@ namespace TodosAppTest.Features
 this.ScenarioSetup(scenarioInfo);
 #line 6
 this.FeatureBackground();
-#line 12
+#line 11
  testRunner.When("I fill in s in txtSearch element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+#line 12
  testRunner.Then("one todo item should be found", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

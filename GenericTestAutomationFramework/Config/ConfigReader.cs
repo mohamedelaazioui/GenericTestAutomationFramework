@@ -7,9 +7,9 @@ using System.Configuration;
 using System.Xml;
 using System.Xml.XPath;
 using System.IO;
-using GenericTestAutomationFramework.Config;
 
-namespace EAAutoFramework.Config
+
+namespace GenericTestAutomationFramework.Config
 {
     public class ConfigReader
     {
